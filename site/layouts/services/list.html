@@ -1,0 +1,26 @@
+{{ define "main" }}
+
+  <section class="section breath">
+    <div class="wrap mx-auto">
+      <div class="gg page-intro">
+        <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid consequuntur voluptas, iste, possimus quia nisi neque consequatur omnis magnam molestias vel ducimus. Ad, odio perferendis architecto voluptate soluta cum vitae?</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap mx-auto">
+      <div class="gg c-4">
+        <article class="gg c-2 g-article">
+          {{ range .Pages }}
+          <div>
+            <h2 class="text-md mb-4">{{ .Title }}</h2>
+            {{ .Content }}
+          </div>
+          {{ end }}
+        </article>
+      </div>
+    </div>
+  </section>
+
+{{ end }}

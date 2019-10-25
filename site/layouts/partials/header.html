@@ -1,0 +1,38 @@
+
+<header class="main-header">
+  <div class="wrap mx-auto flex justify-between">
+    <a id="logo" class="branding" href="{{ $.Site.Home.RelPermalink }}" rel="home" aria-label="{{ $.Site.Title }}">
+      {{ $.Site.Title }}
+    </a>
+
+    <a class="burger icon" role="button" aria-label="Toggle navigation" tabindex="0" aria-expanded="false">
+      {{ with resources.Get "./img/burger.svg" }}
+      {{ .Content | safeHTML }}
+      {{ end }}
+    </a>
+  </div>
+</header>
+
+<div class="modal-nav px-8 md:px-16" role="dialog" tabindex="-1">
+  <div class="wrap mx-auto h-full">
+    <div class="gg w-full h-full breath">
+      <nav class="navbar res-text-md" role="navigation" aria-label="Site navigation">
+        <ul class="menubar" role="menubar">
+          {{ $currentPage := . }}
+          {{ range .Site.Menus.main }}
+          <li class="menu-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}">
+              <a href="{{ .URL }}" class="link">{{ .Name }}</a>
+          </li>
+          {{ end }}
+        </ul>
+      </nav>
+      <aside class="socials mt-2" role="complimentary">
+        <ul class="list-reset">
+          {{ range $.Site.Data.social.accounts }}
+          <li><a class="link" href="{{ .link }}" target="_blank" class="sa {{ .slug}}" rel="noopener nofollow">{{ .title }}</a></li>
+          {{ end }}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</div>

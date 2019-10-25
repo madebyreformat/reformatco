@@ -1,0 +1,6 @@
+<picture class="gsq">
+  {{ with .graphic }}
+  <source data-srcset="https://ucarecdn.com/{{ . }}/-/scale_crop/400x400/center/xl.jpg 1x,https://ucarecdn.com/{{ . }}/-/scale_crop/800x800/center/xl@2x.jpg 2x" media="(min-width:768px)">
+  <img data-src="https://ucarecdn.com/{{ . }}/-/scale_crop/200x200/center/sm.jpg" data-srcset="https://ucarecdn.com/{{ . }}/-/scale_crop/400x400/center/sm@2x.jpg 2x" class="w-full md:h-full md:object-cover lazyload" alt="">
+  {{ end }}
+</picture>

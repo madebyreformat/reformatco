@@ -1,0 +1,15 @@
+---
+accounts:
+  - title: "Github"
+    slug: "github"
+    link: "https://github.com/madebyreformat/"
+  - title: "Twitter"
+    slug: "twitter"
+    link: "https://twitter.com/reformatco"
+  - title: "Instagram"
+    slug: "instagram"
+    link: "https://instagram.com/reformatco/"
+  - title: "Pinterest"
+    slug: "pinterest"
+    link: "https://pinterest.com/reformatco/"
+---

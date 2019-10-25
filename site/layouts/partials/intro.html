@@ -1,0 +1,41 @@
+{{ $classes := .classes }}
+{{ with .dot }}
+  <section class="section breath {{ $classes }}">
+    <div class="wrap mx-auto">
+      <article class="gg c-4">
+
+        {{ block "intro" . }}
+          <header class="work-intro">
+            {{ if eq .Section "work" }}<h1 class="leading-none mb-8">{{ .Title }}</h1>{{ end }}
+            <p class="res-text-lg leading-none font-bold">{{ .Params.Intro }}</p>
+            {{ with .Params.tags }}
+              <ul class="tags">
+                {{ range . }}
+                  <li><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}" class="tag">{{ . }}</a></li>
+                {{ end }}
+              </ul>
+            {{ end }}
+          </header>
+        {{ end }}
+
+        {{ if eq .Section "work" }}
+        <div class="gg c-4 work-info">
+          <div class="work-info-item">
+            <header>Designer</header>
+            <p>{{ .Params.designer }}</p>
+          </div>
+          <div class="work-info-item">
+            <header>Year</header>
+            <p>{{ .Params.complete }}</p>
+          </div>
+          <div class="work-info-item">
+            <header><abbr title="Universal Resource Locator">URL</abbr></header>
+            <p><a class="link" href="{{ .Params.ext_url }}" target="_blank" rel="noopener">{{ .Params.ext_domain }}</a></p>
+          </div>
+        </div>
+        {{ end }}
+
+      </article>
+    </div>
+  </section>
+{{ end }}

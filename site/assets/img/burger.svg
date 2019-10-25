@@ -1,0 +1,7 @@
+<svg class="fill-current w-full h-full pointer-events-none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 60 60">
+  <circle class="circle" cx="30" cy="30" r="3.5"/>
+  <circle class="circle" cx="18.5" cy="30" r="3.5"/>
+  <circle class="circle" cx="41.5" cy="30" r="3.5"/>
+  <line class="stroke-current line" x1="40.607" y1="19.393" x2="19.393" y2="40.607" fill="none" stroke-miterlimit="10" stroke-width="3"/>
+  <line class="stroke-current line" x1="40.607" y1="40.607" x2="19.393" y2="19.393" fill="none" stroke-miterlimit="10" stroke-width="3"/>
+</svg>

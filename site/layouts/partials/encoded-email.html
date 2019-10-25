@@ -1,0 +1,5 @@
+<script type="text/javascript">// <![CDATA[
+  var liame ='{{ .email | base64Encode }}';
+  var liameHREF ='{{ (print "href=\"mailto:" .email "\"")  | base64Encode }}';
+  document.write('<a data-no-swup class="{{ .class }}" ' + atob(liameHREF) + '>' + atob(liame) + '<\/a>')
+</script>

@@ -1,0 +1,27 @@
+<section class="section {{ .Get "class" }}">
+  <div class="wrap mx-auto">
+    <div class="video">
+      {{ if .Get "browser" }}<div class="browser w-full {{ if eq (.Get "browser") "phone" }}phone{{end}}">{{ end }}
+        <div id="video-{{ .Get "id" }}"></div>
+        <script src="https://player.vimeo.com/api/player.js"></script>
+        <script>
+            var options = {
+                id: {{ .Get "id" }},
+                width: 1280,
+                loop: true,
+                autoplay: true,
+                mute: true,
+                quality: '4k',
+                background: true,
+                responsive: true
+            };
+
+            var player = new Vimeo.Player('video-{{ .Get "id" }}', options);
+
+            player.setVolume(0);
+
+        </script>
+      {{ if .Get "browser" }}</div>{{ end }}
+    </div>
+  </div>
+</section>

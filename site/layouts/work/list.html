@@ -1,0 +1,31 @@
+{{ define "main" }}
+
+  {{ partial "intro" (dict "dot" .) }}
+
+  <section class="section work-grid">
+    <div class="wrap mx-auto">
+
+      <div class="gg c-2">
+
+        <div class="work-items hidden lg:block">
+          <ul class="res-text-md sticky top-0 breath -breath">
+            {{ range .Pages }}
+            <li><a href="{{ .RelPermalink }}" class="link">{{ .Title }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+
+        <div class="work-grid gg">
+
+          {{ range .Pages }}
+            {{ partial "tease/tease-work" (dict "dot" .) }}
+          {{ end }}
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+{{ end }}

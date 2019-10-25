@@ -1,0 +1,57 @@
+.main-header {
+  @apply fixed w-full px-8 z-20 top-0 py-4;
+  /* mix-blend-mode:difference; */
+  @screen md {
+    @apply px-16;
+  }
+  transition:all .33s linear;
+}
+
+.branding {
+  @apply leading-none h-16 flex items-center res-text-md;
+}
+
+.burger {
+  @apply w-16 h-16 z-20 outline-none;
+  @screen lg {
+    /* @apply hidden; */
+  }
+
+  .line,
+  .circle {
+    transform-origin:center center;
+    transition:transform .33s ease-in-out;
+  }
+
+  &[aria-expanded="false"]{
+    .line {
+      transform:scale(0);
+    }
+    .circle {
+
+    }
+  }
+  &[aria-expanded="true"]{
+    .line {
+      transform:scale(1);
+    }
+    .circle {
+      transform:scale(0);
+    }
+  }
+
+}
+
+.modal-nav {
+  @apply bg-white fixed z-10 top-0 left-0 w-full h-full opacity-0 invisible;
+  transition:visibility 0s linear .33s,opacity .33s ease-in-out;
+}
+
+.nav-active {
+  touch-action: none;
+  overflow:hidden;
+  .modal-nav {
+    @apply visible opacity-100;
+    transition-delay:0s;
+  }
+}

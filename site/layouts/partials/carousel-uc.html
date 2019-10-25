@@ -1,0 +1,28 @@
+<section class="fs">
+  <figure class="hero">
+    <div class="carousel uc w-full h-full load-hidden slidein">
+      {{ range .image }}
+      <picture class="slide w-full h-full">
+        <source srcset="https://ucarecdn.com/{{ . }}/-/scale_crop/1440x1000/center/xl.jpg 1x,https://ucarecdn.com/{{ . }}/-/scale_crop/2880x2000/center/xl@2x.jpg 2x" media="(min-width:1280px)">
+        <source srcset="https://ucarecdn.com/{{ . }}/-/scale_crop/1024x680/center/md.jpg 1x,https://ucarecdn.com/{{ . }}/-/scale_crop/2048x1360/center/md@2x.jpg 2x" media="(min-width:768px)">
+        <img src="https://ucarecdn.com/{{ . }}/-/scale_crop/375x375/center/sm.jpg" srcset="https://ucarecdn.com/{{ . }}/-/scale_crop/750x750/center/sm@2x.jpg 2x" class="w-full h-full object-cover select-none" alt="">
+      </picture>
+      {{ end }}
+    </div>
+    {{ if .overlay }}
+    <figcaption class="hero-graphic" aria-label="{{ with .title }}{{ . }}{{ end }}">
+      {{ $svg := resources.GetMatch .overlay }}
+      {{ $svg.Content | safeHTML }}
+    </figcaption>
+    {{ end }}
+  </figure>
+  {{ if .hero }}
+  <div class="branding">
+    <div class="anim-rotate">
+      {{ $svg := resources.Get "./img/logo.svg" }}
+      {{ $svg.Content | safeHTML }}
+    </div>
+  </div>
+  {{ end }}
+</section>
+<div class="st"></div>

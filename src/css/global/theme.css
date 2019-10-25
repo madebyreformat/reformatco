@@ -1,0 +1,66 @@
+:root {
+  --textcolor: theme('colors.black');
+  --bgcolor: theme('colors.green');
+}
+
+body {
+  background-color:var(--bgcolor);
+  * {
+    color:var(--textcolor);
+  }
+  .modal-nav {
+    background-color:var(--bgcolor);
+  }
+  &.scrolling {
+    .main-header {
+      background-color:var(--bgcolor);
+    }
+  }
+}
+
+/* @media (prefers-color-scheme: dark) {
+
+  :root {
+    --textcolor: theme('colors.green');
+    --bgcolor: theme('colors.black');
+  }
+
+  body {
+    background-color:var(--bgcolor);
+    * {
+      color:var(--textcolor);
+    }
+  }
+
+  .modal-nav {
+    background-color:var(--bgcolor) !important;
+  }
+
+} */
+
+.branding,
+.icon {
+  color: var(--textcolor);
+}
+
+.reverse {
+  background-color:var(--textcolor);
+  * {
+    color:var(--bgcolor);
+  }
+}
+
+.single-work {
+  .main-header {
+    --textcolor: theme('colors.green');
+    --bgcolor: theme('colors.black');
+  }
+  &.nav-active,
+  &.scrolling {
+    .main-header {
+      --textcolor: theme('colors.black');
+      --bgcolor: theme('colors.green');
+    }
+  }
+
+}

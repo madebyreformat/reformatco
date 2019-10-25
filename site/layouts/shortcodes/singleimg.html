@@ -1,0 +1,20 @@
+<section class="section {{ .Get "class" }}">
+  <div class="wrap mx-auto">
+      <div class="gg c-4">
+          <figure class="fig-image mid">
+            {{ if .Get "browser" }}<div class="browser {{ if eq (.Get "browser") "phone" }}phone{{end}}">{{ end }}
+              {{ with .Page.Resources.GetMatch (.Get "src") }}
+              <picture>
+                {{ $xl := .Resize "720x" }}
+                {{ $sm := .Resize "375x" }}
+                {{ $xl2x := .Resize "1440x" }}
+                {{ $sm2x := .Resize "750x" }}
+                <source srcset="{{ $xl.RelPermalink }} 1x,{{ $xl2x.RelPermalink }} 2x" media="(min-width:768px)">
+                <img src="{{ $sm.RelPermalink }}" srcset="{{ $sm2x.RelPermalink }} 2x" alt="">
+              </picture>
+              {{ end }}
+            {{ if .Get "browser" }}</div>{{ end }}
+          </figure>
+      </div>
+  </div>
+</section>

@@ -1,0 +1,40 @@
+html {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  /* font-feature-settings: "kern" 1; */
+  font-kerning: normal;
+  scroll-behavior: smooth;
+  @apply font-sans;
+  font-size:87.5%;
+  line-height:1.5;
+  @screen md {
+    font-size:100%;
+    line-height:1.5;
+  }
+}
+
+*,
+*:before,
+*:after {
+  box-sizing:border-box !important;
+}
+
+html, body {
+  @apply m-0 p-0 min-h-full;
+}
+
+body {
+  @apply font-sans;
+}
+
+.wrap {
+  max-width: 1440px;
+}
+
+.gs {
+  @apply m-8;
+  @screen lg {
+    @apply m-16;
+  }
+}

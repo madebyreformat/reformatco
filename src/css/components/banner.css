@@ -1,0 +1,16 @@
+.fs {
+  height:66vh;
+  @apply w-full bg-transparent relative text-white overflow-hidden;
+  @screen md {
+    @apply h-screen;
+  }
+
+  /* height:0; */
+  /* padding-bottom:calc( 100% * (930/1400)); */
+  .hero-text {
+    @apply text-center;
+  }
+  .hero {
+    @apply block w-full h-full absolute;
+  }
+}

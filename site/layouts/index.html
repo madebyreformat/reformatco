@@ -1,0 +1,45 @@
+{{ define "main" }}
+
+  {{/*  {{ $items := slice "0cea654b-273c-467f-9097-81f550c13c24" "b3196457-6730-4714-85fb-f73d64d84b0a" "232491ea-74e0-4257-99f1-f4ae543ccb69" "e6042a6c-bcb6-45ed-8de7-670117864231" "51aa711d-34f9-4ff3-a83b-a758a1cd4407" }}  */}}
+  {{/*  {{ partial "carousel-uc" (dict "context" . "image" $items "hero" "true") }}  */}}
+
+  <section class="section breath">
+    <div class="wrap mx-auto">
+      <div class="gg cg">
+        <div class="intro leading-tight">
+          <p>{{ .Params.Intro }}</p>
+        </div>
+        <article class="article content">
+          {{ .Content }}
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section reverse">
+    <div class="wrap mx-auto">
+      <div class="gg cg">
+        <header class="res-text-xl leading-none">Process</header>
+        <article class="article content">
+          <p>Technologies, dev stack etc</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap mx-auto">
+      <header class="res-text-xl leading-none">Featured work</header>
+
+      <div class="work-list gg">
+
+        {{ range where .Site.RegularPages "Params.featured" "==" true }}
+          {{ partial "tease/tease-work" (dict "caption" 1 "dot" .) }}
+        {{ end }}
+
+      </div>
+
+    </div>
+  </section>
+
+{{ end }}

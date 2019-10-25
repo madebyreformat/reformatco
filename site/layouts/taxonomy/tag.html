@@ -1,0 +1,23 @@
+{{ define "main" }}
+
+  <section class="section breath">
+    <div class="wrap mx-auto">
+      <article class="gg c-4">
+        <header class="work-intro">
+          <h1 class="res-text-lg leading-none mb-4">#{{ .Title }}</h1>
+        </header>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="wrap mx-auto">
+      <div class="work-list gg">
+        {{ range where .Data.Pages "Section" "work" }}
+          {{ partial "tease/tease-work" (dict "caption" 1 "dot" .) }}
+        {{ end }}
+      </div>
+    </div>
+  </section>
+
+{{ end }}

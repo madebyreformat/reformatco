@@ -1,0 +1,10 @@
+<picture class="gsq">
+  {{ with resources.GetMatch .graphic }}
+  {{ $xl := .Fill "400x400 smart" }}
+  {{ $sm := .Fill "200x200 smart" }}
+  {{ $xl2x := .Fill "800x800 smart" }}
+  {{ $sm2x := .Fill "400x400 smart" }}
+  <source data-srcset="{{ $xl.RelPermalink }} 1x,{{ $xl2x.RelPermalink }} 2x" media="(min-width:768px)">
+  <img data-src="{{ $sm.RelPermalink }}" data-srcset="{{ $sm2x.RelPermalink }} 2x" class="w-full md:h-full md:object-cover lazyload" alt="">
+  {{ end }}
+</picture>

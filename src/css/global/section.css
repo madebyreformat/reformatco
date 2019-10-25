@@ -1,0 +1,6 @@
+.section {
+  @apply px-8 py-16;
+  @screen md {
+    @apply px-16 py-32;
+  }
+}
