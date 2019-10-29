@@ -1,5 +1,6 @@
 # Reformat
 
+<!--
 We need a new website for the end of 2019. This will probably live for around 6 months so we can get in more work and start doing marketing, with a full relaunch spring 2020.
 
 The new site needs to
@@ -57,3 +58,5 @@ The new site needs to
 - playbook for targetting [Denmark](https://playbook.aju.dk/)
 - very simple [hosting page](https://hostedbyaju.com/)
 - page is treated full page rather than a long scroll
+
+-->
