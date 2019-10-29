@@ -29,7 +29,8 @@
   a,
   .work-label {
     @screen md {
-      width:calc(50% - theme('spacing.16'));
+      /* width:calc(50% - theme('spacing.16')); */
+      width:calc(50% - theme('spacing.8'));
     }
   }
   &.portrait {
@@ -42,7 +43,7 @@
 }
 
 .work-label {
-  @apply mt-4 flex flex-col;
+  @apply mt-2 flex flex-col;
 }
 
 /* .work-grid {

@@ -1,0 +1,9 @@
+.toc {
+  ul {
+    @apply border-b border-black border-solid;
+    li {
+      @apply border-t border-black border-solid py-2 text-base;
+      border-bottom:0;
+    }
+  }
+}

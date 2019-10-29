@@ -52,15 +52,16 @@ body {
 
 .single-work {
   .main-header {
-    --textcolor: theme('colors.green');
+    --textcolor: theme('colors.white');
     --bgcolor: theme('colors.black');
   }
+  /*
   &.nav-active,
   &.scrolling {
     .main-header {
       --textcolor: theme('colors.black');
       --bgcolor: theme('colors.green');
     }
-  }
+  } */
 
 }

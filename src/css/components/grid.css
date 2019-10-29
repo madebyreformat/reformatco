@@ -69,6 +69,12 @@
   }
 }
 
+.c-6 {
+  @screen lg {
+    grid-template-columns:repeat(6,1fr);
+  }
+}
+
 .g-article {
   @screen lg {
     grid-column: 2 / 4;
