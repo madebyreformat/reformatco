@@ -1,6 +1,6 @@
 module.exports = {
   content: ['site/layouts/**/*.html'],
-  whitelist: ['loading', 'yeah', 'nav-active', 'subnav-active'],
+  whitelist: ['loading', 'nav-active', 'single-work'],
   extractors: [
     {
       extensions: ['html', 'svg', 'js'],

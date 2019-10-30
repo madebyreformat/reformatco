@@ -1,5 +1,5 @@
-baseurl = "https://reformat.co/"
-# baseurl = "/"
+# baseurl = "https://reformat.co/"
+baseurl = "/"
 languageCode = "en-gb"
 languageLang = "en"
 title = "Reformat"
